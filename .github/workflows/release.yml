@@ -45,6 +45,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         artifacts: "target/aerospike-circuit-breaker-*-with-dependencies.jar"
+        artifactContentType: "application/java-archive"
         generateReleaseNotes: true
         commit: main
         tag: ${{ github.sha }}
