@@ -21,4 +21,3 @@ jobs:
         generateReleaseNotes: true
         commit: main
         tag: ${{ github.sha }}
-        draft: true
