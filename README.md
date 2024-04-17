@@ -5,6 +5,8 @@ Aerospike Circuit Breaker in Java
 [![Aerospike Community](https://img.shields.io/badge/Aerospike-Community_Editition-C22127?labelColor=white&logo=aerospike&logoColor=C22127&style=flat)](https://aerospike.com/download/#aerospike-server-community-edition)
 [![Aerospike Java](https://img.shields.io/badge/Aerospike-Java_Client-C22127?labelColor=white&logo=aerospike&logoColor=C22127&style=flat)](https://aerospike.com/download/#aerospike-clients-java-client-library)
 
+[![Build](https://github.com/aerospike-examples/aerospike-circuit-breaker-java/actions/workflows/build.yml/badge.svg)](https://github.com/aerospike-examples/aerospike-circuit-breaker-java/actions/workflows/build.yml)
+
 [Aerospike](http://www.aerospike.com) is a low-latency distributed NoSQL database. This project is an example Java application that demonstrates how the "circuit breaker" design pattern is implemented in Aerospike. See my blog post [Aerospike Circuit Breaker Pattern](https://aerospike.com/blog/) for a complete discussion.
 
 This project uses the asynchronous API of the Aerospike Java Client. You can read about how that works in [Understanding Asynchronous Operations](https://aerospike.com/developer/tutorials/java/async_ops) on Aerospike Developer Hub.
