@@ -153,3 +153,22 @@ Other errors:             0
 Connections opened:       1524
 Connections closed:       1428
 ```
+
+In a real-world scenario, the exception handler for the `MAX_ERROR_RATE` would be able handle the back pressure according to the use case. For example, if the application is still within SLA and/or there isn't an end-user waiting on a response, the failed operations can be queued for a retry later when the network stabilizes.
+
+```java
+public void onFailure(AerospikeException e) {
+
+    switch (e.getResultCode()) {
+        // ...
+        case ResultCode.MAX_ERROR_RATE:
+            // Exceeded max number of errors per tend interval (~1s)
+            // The operation can be queued for retry with something like
+            // like an exponential backoff, captured in a dead letter
+            // queue, etc.
+            break;
+        // ...
+    }
+}
+
+```
