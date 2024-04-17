@@ -170,5 +170,4 @@ public void onFailure(AerospikeException e) {
         // ...
     }
 }
-
 ```
