@@ -47,4 +47,5 @@ jobs:
         artifacts: "target/aerospike-circuit-breaker-*-with-dependencies.jar"
         generateReleaseNotes: true
         commit: main
+        tag: ${{ github.sha }}
         draft: true
